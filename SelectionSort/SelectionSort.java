@@ -15,17 +15,17 @@ public class SelectionSort {
 	public static void selectionsort(int[] arr) {
 		
 		for(int i=0;i<arr.length;i++) {
-			int last = arr.length-i-1;
-			int maxindex = getMaxIndex(arr,0,last);
-			swap(arr,maxindex,last);
+			int lastindex = arr.length-i-1;
+			int maxindex = getMaxIndex(arr,0,lastindex);
+			swap(arr,maxindex,lastindex);
 		}
 		
 	}
 
-	public static void swap(int[] arr, int maxindex, int last) {
+	public static void swap(int[] arr, int maxindex, int lastindex) {
 		int temp = arr[maxindex];
-		arr[maxindex] = arr[last];
-		arr[last] = temp;
+		arr[maxindex] = arr[lastindex];
+		arr[lastindex] = temp;
 		
 		
 	}
