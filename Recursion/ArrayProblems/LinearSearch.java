@@ -17,6 +17,8 @@ public class LinearSearch {
 		System.out.println(list);
 		System.out.println(findAllIndexreturn(arr,target,0,new ArrayList<Integer>()));
 		
+		System.out.println("findAllIndexreturn2" + findAllIndexreturn2(arr,target,0));
+		
 	}
 	//my solution
 	static int findindex(int[] arr, int target,int index) {
@@ -87,6 +89,22 @@ public class LinearSearch {
 			}
 			 return findAllIndexreturn(arr,target,index+1,list);
 		} 
+	 
+	 static ArrayList<Integer> findAllIndexreturn2(int[] arr,int target,int index) {
+		 ArrayList<Integer> list = new ArrayList<Integer>();
+			if(index==arr.length) {
+				return list;
+			}
+			
+			//this will contain the answer for that function call only.
+			if(arr[index] == target) {
+				list.add(index);
+			}
+			ArrayList<Integer> ansfrombelowCalls =  findAllIndexreturn2(arr,target,index+1);
+			list.addAll(ansfrombelowCalls)	;			//this line will be getting executed when the function are getting out from the stack
+			return list;
+			
+	 } 
 	
 	
 }
