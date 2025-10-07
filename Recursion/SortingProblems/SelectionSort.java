@@ -10,9 +10,9 @@ public class SelectionSort {
 		System.out.println(Arrays.toString(arr));
 	}
 	
-	//select the max element put it in last, swap the max and last element
+	//select the max element put it in last, swap the max and last element 
 	static void selection(int[] arr, int row,int col, int max) {
-		if(row ==0) {
+		if(row ==0) {  // base condition
 			return;
 		}
 		
