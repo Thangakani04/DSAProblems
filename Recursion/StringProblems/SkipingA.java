@@ -1,7 +1,8 @@
 package Recursion.Strings;
 
-public class stream {
+public class SkipingA {
 	
+	//with recursion
 	public static void main(String[] args) {
 		skip("" ,"baccad");
 		String ans  = skip("baccaadfg");
