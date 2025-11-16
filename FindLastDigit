@@ -1,0 +1,15 @@
+// User function Template for Java
+import java.util.*;
+import java.math.BigInteger;
+class Solution {
+    static int getLastDigit(String a, String b) {
+       BigInteger base = new BigInteger(a);
+	BigInteger exp = new BigInteger(b);
+		
+		BigInteger mod = BigInteger.TEN;
+		BigInteger ans = base.modPow(exp, mod);
+		int result = ans.intValue();
+	
+        return result;
+    }
+}
